@@ -1,0 +1,8 @@
+hyperparameters:
+  kernel: [rbf]
+
+  C: [1e-03, 1e-02, 1e-01, 1, 10, 100]
+
+  gamma: [1e-01,1e-02, 1e-03, 1e-04] 
+
+name: 'svm_rbf'

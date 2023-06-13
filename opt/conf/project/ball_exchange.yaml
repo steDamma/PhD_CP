@@ -1,0 +1,9 @@
+target: {}
+
+loo_criterion: 'n_groups'
+
+name: 'ball_exchange_project'
+
+defaults:
+  - target: ball
+  - _self_
