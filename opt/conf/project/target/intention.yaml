@@ -1,3 +1,0 @@
-feat_importances: data/FRIntention_features.csv
-features: featIntentionNormalized.csv
-aim: intention

@@ -1,6 +1,0 @@
-hyperparameters:
-  kernel: [linear] 
-
-  C: [1e-03, 1e-02, 1e-01, 1, 10, 100]
-
-name: 'svm_lin'

@@ -1,3 +1,0 @@
-feat_importances: data/FRBall_features.csv
-features: ../data/featBallNormalized.csv
-aim: ball
