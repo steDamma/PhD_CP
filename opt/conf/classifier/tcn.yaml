@@ -1,0 +1,14 @@
+hyperparameters:
+  batch_size: 1024
+  epochs: 1000
+  lr: 1e-4
+  weight_decay: 3e-4
+  num_layers: [1, 2, 3]
+  hidden_dim: [32, 64, 128]
+  kernel_sizes: [3,5,7,9,11] 
+  dropout: [.15, .2, .25]
+
+store_model: False
+verbose: True
+
+name: 'tcn'

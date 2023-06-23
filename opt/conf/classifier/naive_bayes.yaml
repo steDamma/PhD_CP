@@ -1,0 +1,7 @@
+hyperparameters:
+  var_smoothing': 
+    - 1e-09 
+    - 5e-08
+    - 1e-08
+
+name: 'naive_bayes'

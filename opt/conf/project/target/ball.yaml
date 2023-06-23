@@ -1,0 +1,4 @@
+feat_importances: data/FRBall_features.csv
+features: ../data/featBallNormalized.csv
+raw_data: ../data/interpolated.csv
+aim: ball

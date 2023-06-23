@@ -1,0 +1,11 @@
+target: {}
+
+loo_criterion: 'n_groups'
+
+name: 'ball_exchange_project'
+
+single_istance_defined_by: ['n_groups', 'ball', 'intention', 'launcher', 'receiver', 'n_launch'] 
+
+defaults:
+  - target: ball
+  - _self_

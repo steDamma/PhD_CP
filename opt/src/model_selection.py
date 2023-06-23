@@ -11,11 +11,13 @@ def leave_1_out(X,loo, target):
   target_column_index = X.columns.get_loc(loo)
   columns_to_group = X.columns[:target_column_index + 1].tolist()
 
-  grouped = X.groupby(columns_to_group)#.groupby(X.columns[:X.columns.get_loc(loo) + 1])
+  grouped = X.groupby(columns_to_group)
   for i, (name,test) in enumerate(grouped):
     train = X.drop(test.index)
-    
-    yield train.index, test.index
+    train_idx = train.index.intersection(X.index).tolist()
+    test_idx = test.index.tolist()
+    yield train_idx, test_idx
+
 
 def monte_carlo_leave_1_out(X, loo, target, n_samples):
   target_column_index = X.columns.get_loc(loo)
@@ -23,11 +25,13 @@ def monte_carlo_leave_1_out(X, loo, target, n_samples):
 
   grouped = X.groupby(columns_to_group)
   lun = len(grouped)
-  mc = np.random.randint(lun, size=(n_samples))
+  mc = np.random.choice(lun, size=n_samples, replace=False)
+
   for i, (name,test) in enumerate(grouped):
     if i in mc:
       train = X.drop(test.index)
       yield train.index, test.index
+
 
 
 

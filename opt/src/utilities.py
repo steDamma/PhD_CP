@@ -1,5 +1,11 @@
 import pickle
 import os
+import pandas as pd
+
+def pd_get_groups(grouped, idxs, istance):
+    filtered_groups = [group for i, (_, group) in enumerate(grouped) if i in idxs]
+    combined_df = pd.concat(filtered_groups)#, ignore_index=True)
+    return combined_df.groupby(istance)
 
 def store_res(config, results):
     project_folder = config.project.name

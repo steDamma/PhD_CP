@@ -1,0 +1,8 @@
+hyperparameters:
+  max_features: [0.005, 0.1, 'sqrt']
+  
+  min_samples_leaf: [1, 5, 10]
+  
+  max_depth: [5, 10]
+
+name: 'rf'
